@@ -52,3 +52,33 @@ test('score a full game of normal frames', () => {
 
   expect(actual).toBe(expected)
 })
+
+test('score a spare', () => {
+  const frames = [
+    [5, 5],
+    [4, 3],
+  ]
+  const expected = 21
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
+
+test('score a game with multiple spares', () => {
+  const frames = [
+    [0, 2],
+    [5, 5],
+    [3, 3],
+    [2, 5],
+    [6, 4],
+    [0, 2],
+    [5, 5],
+    [3, 3],
+    [2, 5],
+    [1, 4],
+  ]
+  const expected = 71
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
