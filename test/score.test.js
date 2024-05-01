@@ -20,3 +20,35 @@ test('Scores a single frame', () => {
 
   expect(actual).toBe(expected)
 })
+
+test('Score multiple normal frames', () => {
+  const frames = [
+    [0, 1],
+    [5, 4],
+    [3, 2],
+    [2, 2],
+  ]
+  const expected = 19
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
+
+test('score a full game of normal frames', () => {
+  const frames = [
+    [0, 2],
+    [5, 4],
+    [3, 3],
+    [2, 5],
+    [1, 4],
+    [0, 2],
+    [5, 4],
+    [3, 3],
+    [2, 5],
+    [1, 4],
+  ]
+  const expected = 58
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
