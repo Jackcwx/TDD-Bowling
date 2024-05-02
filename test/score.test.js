@@ -82,3 +82,102 @@ test('score a game with multiple spares', () => {
 
   expect(actual).toBe(expected)
 })
+
+test('score a game with a strike', () => {
+  const frames = [
+    [10, 0],
+    [5, 2],
+  ]
+  const expected = 24
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
+
+test('score a game with strikes and spares', () => {
+  const frames = [
+    [6, 4],
+    [8, 0],
+    [10, 0],
+    [2, 7],
+    [5, 5],
+    [4, 0],
+    [10, 0],
+    [2, 1],
+    [2, 6],
+    [4, 4],
+  ]
+  const expected = 104
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
+
+test('score a game with a double strike', () => {
+  const frames = [
+    [10, 0],
+    [10, 0],
+    [5, 0],
+  ]
+  const expected = 45
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
+
+test('score a full game with a double strike and spares', () => {
+  const frames = [
+    [1, 2],
+    [6, 4],
+    [5, 4],
+    [10, 0],
+    [7, 2],
+    [10, 0],
+    [10, 0],
+    [5, 2],
+    [7, 0],
+    [4, 4],
+  ]
+  const expected = 119
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
+
+test('score a full game with a strike on the last frame', () => {
+  const frames = [
+    [1, 2],
+    [6, 4],
+    [5, 4],
+    [10, 0],
+    [7, 2],
+    [10, 0],
+    [10, 0],
+    [5, 2],
+    [7, 0],
+    [10, 10, 10],
+  ]
+  const expected = 141
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
+
+test('score a perfect game', () => {
+  const frames = [
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 10, 10],
+  ]
+  const expected = 300
+  const actual = score.scoreFrame(frames)
+
+  expect(actual).toBe(expected)
+})
