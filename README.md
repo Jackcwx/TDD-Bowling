@@ -13,8 +13,8 @@ This kata aims to help you become familiar with test-first design, also commonly
 
 ### 0. Preparing a test runner
 
-- [ ] `npm install -D vitest`
-- [ ] Change the `test` script in `package.json` to `"vitest"`
+- [x] `npm install -D vitest`
+- [x] Change the `test` script in `package.json` to `"vitest"`
 
 <details style="padding-left: 2em">
   <summary>More about the test script</summary>
@@ -35,7 +35,7 @@ This kata aims to help you become familiar with test-first design, also commonly
 
 ### 1. Create a sample test
 
-- [ ] Create a test that will always pass
+- [x] Create a test that will always pass
   <details style="padding-left: 2em">
     <summary>More about the sample test</summary>
 
@@ -50,14 +50,14 @@ This kata aims to help you become familiar with test-first design, also commonly
     ```
   </details>
 
-- [ ] Run the tests
+- [x] Run the tests
   <details style="padding-left: 2em">
     <summary>More about running tests</summary>
 
     Run tests on the command line with `npm test` and celebrate if we're getting a passing test. Next, we will commit the working test.
   </details>
 
-- [ ] Commit our work
+- [x] Commit our work
   <details style="padding-left: 2em">
     <summary>More about committing</summary>
     
@@ -69,7 +69,7 @@ This kata aims to help you become familiar with test-first design, also commonly
 
 ### 2. Preparing to test frames
 
-- [ ] import a new file, `./score`, from `score.test.js`
+- [x] import a new file, `./score`, from `score.test.js`
   <details style="padding-left: 2em">
     <summary>More about importing</summary>
 
@@ -81,7 +81,7 @@ This kata aims to help you become familiar with test-first design, also commonly
     Now you'll notice we are getting an error because it can't find the `score` reference (because it doesn't exist yet).
   </details>
 
-- [ ] Create `score.js` which exports an empty object
+- [x] Create `score.js` which exports an empty object
   <details style="padding-left: 2em">
     <summary>More about <code>score.js</code></summary>
 
@@ -101,7 +101,7 @@ This kata aims to help you become familiar with test-first design, also commonly
 
 Now, we will test our least complicated frame.
 
-- [ ] Create a test for returning the score of a gutterball frame. It will fail
+- [x] Create a test for returning the score of a gutterball frame. It will fail
   <details style="padding-left: 2em">
     <summary>More about the gutterball test</summary>
 
@@ -118,7 +118,7 @@ Now, we will test our least complicated frame.
     Now our test is failing because it can't find the `scoreFrame` method. So let's add it.
   </details>
 
-- [ ] Add the `scoreFrame` method to `./score.js` and export it
+- [x] Add the `scoreFrame` method to `./score.js` and export it
   <details style="padding-left: 2em">
     <summary>More about the <code>scoreFrame</code> method</summary>
 
@@ -135,7 +135,7 @@ Now, we will test our least complicated frame.
     Now our test is failing because it returned the wrong value (`undefined`) instead of what it was expecting (`0`). So let's return what it wants.
   </details>
 
-- [ ] Cause `scoreFrame` to return the value expected by our test
+- [x] Cause `scoreFrame` to return the value expected by our test
   <details style="padding-left: 2em">
     <summary>More about the <code>scoreFrame</code> return value</summary>
 
@@ -149,7 +149,7 @@ Now, we will test our least complicated frame.
     Sweet! Our tests are passing again. Let's commit it.
   </details>
 
-- [ ] Commit our work
+- [x] Commit our work
   <details style="padding-left: 2em">
     <summary>More about committing</summary>
 
@@ -163,7 +163,7 @@ Now, we will test our least complicated frame.
 
 Now let's add a feature that can score a normal frame (one without a spare or a strike).
 
-- [ ] Write a test to score a normal frame
+- [x] Write a test to score a normal frame
   <details style="padding-left: 2em">
     <summary>More about the normal frame test</summary>
 
@@ -180,7 +180,7 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
     This new test is failing because we were expecting a `5` and `0` was returned. Apparently our `scoreFrame` method needs to do something more than `return 0`.
   </details>
 
-- [ ] Update the `scoreFrame` function to pass the test
+- [x] Update the `scoreFrame` function to pass the test
   <details style="padding-left: 2em">
     <summary>More about updating <code>scoreFrame</code></summary>
 
@@ -193,7 +193,7 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
     But remember, the cycle is RED -> GREEN -> REFACTOR. Is there anything about our code that we could improve to make it more readable or DRY?
   </details>
 
-- [ ] Commit our work
+- [x] Commit our work
   <details style="padding-left: 2em">
     <summary>More about committing</summary>
 
@@ -207,7 +207,7 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
 
 **From this point forward you will be writing the tests yourself!**
 
-- [ ] Add a test for scoring a spare, and update `scoreFrame` to pass
+- [x] Add a test for scoring a spare, and update `scoreFrame` to pass
   <details style="padding-left: 2em">
     <summary>More about scoring spares</summary>
     
@@ -219,11 +219,11 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
     ```
   </details>
 
-- [ ] Complete any refactoring, re-run the tests, and make a commit
+- [x] Complete any refactoring, re-run the tests, and make a commit
 
 ### 6. Single strike frames
 
-- [ ] Add a test for scoring a single strike, and update `scoreFrame` to pass
+- [x] Add a test for scoring a single strike, and update `scoreFrame` to pass
   <details style="padding-left: 2em">
     <summary>More about scoring single strikes</summary>
     Because a strike uses the next 2 rolls, if the first is another strike (called a double), we'll need yet another frame. Let's tackle the double scenario later. For now, let's handle the single-strike scenario.
@@ -234,11 +234,11 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
     ```
   </details>
 
-- [ ] Complete any refactoring, re-run the tests, and make a commit (again)
+- [x] Complete any refactoring, re-run the tests, and make a commit (again)
 
 ### 7. Double strike frames
 
-- [ ] Add a test for scoring a **double** strike, and update `scoreFrame` to pass
+- [x] Add a test for scoring a **double** strike, and update `scoreFrame` to pass
   <details style="padding-left: 2em">
     <summary>More about scoring double strikes</summary>
     
@@ -250,7 +250,7 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
     ```
   </details>
 
-- [ ] Complete any refactoring, re-run the tests, and make a commit (yet again)
+- [x] Complete any refactoring, re-run the tests, and make a commit (yet again)
   <details style="padding-left: 2em">
     <summary>Tips</summary>
 
@@ -262,7 +262,7 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
 
 ### 8. Score an entire game
 
-- [ ] Add a feature to score a whole game of ten frames
+- [x] Add a feature to score a whole game of ten frames
   <details style="padding-left: 2em">
     <summary>More about scoring an entire game</summary>
     Now that we can score many types of frames, let's add a feature to score a whole game of 10 frames. Because the 10th frame has special behaviour if there is a strike or a spare in it, we'll leave that scenario out of this test and test it separately later. But we can still add normal, spare, single strike and double strike frames.
@@ -273,11 +273,11 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
     ```
   </details>
 
-- [ ] Complete any refactoring, re-run the tests, and make a commit
+- [x] Complete any refactoring, re-run the tests, and make a commit
 
 ### 9. Score a game with a strike or spare in the 10th frame
 
-- [ ] Add a feature to score a game with a strike or spare in the last frame
+- [x] Add a feature to score a game with a strike or spare in the last frame
   <details style="padding-left: 2em">
     <summary>More about scoring special 10th frames</summary>
     Now let's add a feature that calculates the 10th frame when it contains a strike or a spare. You guessed it, a test first.
@@ -292,7 +292,7 @@ Now let's add a feature that can score a normal frame (one without a spare or a 
 
 ### 10. Score a perfect game
 
-- [ ] Add a test that scores a perfect game
+- [x] Add a test that scores a perfect game
 
 <details style="padding-left: 2em">
   <summary>More about a perfect game</summary>
